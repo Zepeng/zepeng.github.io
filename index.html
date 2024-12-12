@@ -41,13 +41,16 @@
             margin: 10px 0;
         }
         .figure-row {
+            max-width: 800px; /* Added max-width */
+            margin: 20px auto; /* Changed margin to center the figure row */
             display: flex;
             justify-content: space-around;
-            margin: 20px 0;
+            flex-wrap: wrap; /* Added flex-wrap for better responsiveness */
+            gap: 20px; /* Added gap between images */
         }
         .figure-row img {
-            width: 200px;
-            height: 200px;
+            width: 160px; /* Reduced from 200px */
+            height: 160px; /* Reduced from 200px */
             object-fit: cover;
         }
     </style>
@@ -90,7 +93,6 @@
                     <strong>Postdoctoral Associate</strong>
                     <span>Yale (Jun 2017 - Oct 2020)</span>
                   </div>
-                
             </ul>
         </section>
         <section>
@@ -102,9 +104,8 @@
                   </div>
                   <div style="display: flex; justify-content: space-between;">
                     <strong>B.S., Physics</strong>
-                    <span>University of Science and Technology of China, 2011</span>
+                    <span>USTC, 2011</span>
                   </div>
-               
             </ul>
         </section>
     </div>
