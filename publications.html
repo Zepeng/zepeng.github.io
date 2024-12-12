@@ -3,32 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selected Publications - Zepeng Li</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Zepeng Li - Publications</title>
+    <style>
+        :root {
+            --primary-color: #2F6E3B;
+            --text-color: #333;
+            --heading-color: #333;
+            --link-color: #2C5282;
+            --background-color: #ffffff;
+        }
+
+        /* [Previous shared styles remain the same until header] */
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        header p {
+            margin: 1rem 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            color: var(--link-color);
+            font-weight: 600;
+            transition: color 0.3s;
+            white-space: nowrap;
+            border-right: 1px solid #ddd;
+        }
+
+        nav a:last-child {
+            border-right: none;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .publications-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .publication-item {
+            padding: 1.5rem;
+            margin: 1rem 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .publication-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .publication-title {
+            color: var(--text-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .publication-journal {
+            color: #666;
+            font-style: italic;
+        }
+
+        section h2 {
+            color: var(--heading-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            nav {
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 1rem;
+            }
+            
+            nav a {
+                padding: 0.5rem 1rem;
+            }
+            
+            .publication-item {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- [Header, nav, and footer sections remain exactly the same] -->
     <header>
-        
+        <div class="container">
+            <h1>Zepeng Li</h1>
+            <p>Email: <a href="mailto:zel032@physics.ucsd.edu">zel032@physics.ucsd.edu</a></p>
+        </div>
     </header>
+
     <div class="container">
         <nav>
             <a href="index.html">Home</a>
-
+            <a href="research.html">Research</a>
+            <a href="publications.html">Selected Publications</a>
         </nav>
+
         <section>
             <h2>Selected Publications</h2>
-            <ul>
-                <li>nEXO: neutrinoless double beta decay search beyond 10^28 year half-life sensitivity.  J.Phys.G 49 (2022) 1, 015104</li>
-                <li>Measurement of the tau neutrino cross section in atmospheric neutrino oscillations with Super-Kamiokande. Phys.Rev.D 98 (2018) 5, 052006</li>
-                <li>Prospects for detecting the diffuse supernova neutrino background with JUNO. JCAP 10 (2022) 033</li>
-                <li>Search for Majoron-emitting modes of Xe-136 double beta decay with the complete EXO-200 dataset. Phys.Rev.D 104 (2021) 11, 112002</li>
-                <li>Simulation of charge readout with segmented tiles in nEXO. JINST 14 (2019) 09, P09020</li>
+            <ul class="publications-list">
+                <li class="publication-item">
+                    <span class="publication-title">nEXO: neutrinoless double beta decay search beyond 10^28 year half-life sensitivity</span>
+                    <span class="publication-journal">J.Phys.G 49 (2022) 1, 015104</span>
+                </li>
+                
+                <li class="publication-item">
+                    <span class="publication-title">Measurement of the tau neutrino cross section in atmospheric neutrino oscillations with Super-Kamiokande</span>
+                    <span class="publication-journal">Phys.Rev.D 98 (2018) 5, 052006</span>
+                </li>
+                
+                <li class="publication-item">
+                    <span class="publication-title">Prospects for detecting the diffuse supernova neutrino background with JUNO</span>
+                    <span class="publication-journal">JCAP 10 (2022) 033</span>
+                </li>
+                
+                <li class="publication-item">
+                    <span class="publication-title">Search for Majoron-emitting modes of Xe-136 double beta decay with the complete EXO-200 dataset</span>
+                    <span class="publication-journal">Phys.Rev.D 104 (2021) 11, 112002</span>
+                </li>
+                
+                <li class="publication-item">
+                    <span class="publication-title">Simulation of charge readout with segmented tiles in nEXO</span>
+                    <span class="publication-journal">JINST 14 (2019) 09, P09020</span>
+                </li>
             </ul>
         </section>
     </div>
+
     <footer>
         <p>&copy; 2024 Zepeng Li</p>
     </footer>
 </body>
 </html>
-

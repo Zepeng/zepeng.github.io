@@ -3,36 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Experience - Zepeng Li</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Zepeng Li - Research</title>
+    <style>
+        :root {
+            --primary-color: #2F6E3B;
+            --accent-color: #4CA658;
+            --text-color: #333;
+            --background-color: #ffffff;
+            --section-spacing: 2rem;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        header p {
+            margin: 1rem 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color 0.3s;
+            white-space: nowrap;
+            border-right: 1px solid #ddd;
+        }
+
+        nav a:last-child {
+            border-right: none;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .research-area {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .research-area h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .research-area p {
+            margin: 1rem 0;
+            text-align: justify;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            nav {
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 1rem;
+            }
+            
+            nav a {
+                padding: 0.5rem 1rem;
+            }
+            
+            .research-area {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-       
-       
+        <div class="container">
+            <h1>Zepeng Li</h1>
+            <p>Email: <a href="mailto:zel032@physics.ucsd.edu">zel032@physics.ucsd.edu</a></p>
+        </div>
     </header>
+
     <div class="container">
         <nav>
             <a href="index.html">Home</a>
-
+            <a href="research.html">Research</a>
+            <a href="publications.html">Selected Publications</a>
         </nav>
-        <section>
-            <h2>Research </h2>
-            <ul>
-                <li><strong> Neutrino <br></strong>
-                    
-                </li>
-                <li><strong>Neutrinoless double beta decay</strong>
-                    
-                </li>
-                <li><strong>Instrumentation R&D</strong>
 
-                <li><strong>Machine learning for physics</strong>
+        <div class="research-area">
+            <h2>Neutrino</h2>
+            <p>My research focuses on understanding the fundamental properties of neutrinos.</p>
+        </div>
 
-                </li>
-            </ul>
-        </section>
+        <div class="research-area">
+            <h2>Neutrinoless Double Beta Decay</h2>
+            <p>I am involved in the search for neutrinoless double beta decay, a hypothetical nuclear process that, if observed, would prove that neutrinos are their own antiparticles (Majorana particles) and provide crucial information about the absolute neutrino mass scale.</p>
+        </div>
+
+        <div class="research-area">
+            <h2>Instrumentation R&D</h2>
+            <p>My work includes the development and optimization of particle detection systems, with a particular focus on cryogenic detectors. </p>
+        </div>
+
+        <div class="research-area">
+            <h2>Machine Learning for Physics</h2>
+            <p>I apply cutting-edge machine learning techniques to data analysis and deploying machine learning on edge computing for physics experiments.</p>
+        </div>
     </div>
+
     <footer>
         <p>&copy; 2024 Zepeng Li</p>
     </footer>

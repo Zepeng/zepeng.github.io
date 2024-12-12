@@ -3,118 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zepeng Li's Personal Webpage</title>
+    <title>Zepeng Li - Physics Research</title>
     <style>
+        :root {
+            --primary-color: #2F6E3B; /* Hawaii green */
+            --accent-color: #4CA658; /* Lighter green for accents */
+            --text-color: #333;
+            --background-color: #ffffff;
+            --section-spacing: 2rem;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
-        header, footer {
-            background: #f4f4f4;
-            padding: 20px;
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
             text-align: center;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: white;
         }
-        nav a {
-            margin: 0 40px;
+
+        header p {
+            margin: 1rem 0;
+        }
+
+        header a {
+            color: white;
             text-decoration: none;
-            color: #0056b3;
+            border-bottom: 1px dotted white;
         }
-        section {
-            margin: 20px 0;
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 2rem;
         }
-        h1, h2 {
-            color: #0056b3;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        .figure-row {
-            max-width: 800px; /* Added max-width */
-            margin: 20px auto; /* Changed margin to center the figure row */
+
+        nav {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap; /* Added flex-wrap for better responsiveness */
-            gap: 20px; /* Added gap between images */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+
+        nav a {
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: color 0.3s;
+            white-space: nowrap;
+            border-right: 1px solid #ddd;
+        }
+
+        nav a:last-child {
+            border-right: none;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin: var(--section-spacing) 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 2rem 0;
+        }
+
+        .experience-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item strong {
+            color: var(--primary-color);
+        }
+
+        .experience-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .figure-row {
+            max-width: 1000px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
         .figure-row img {
-            width: 160px; /* Reduced from 200px */
-            height: 160px; /* Reduced from 200px */
+            width: 100%;
+            height: 200px;
             object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .figure-row img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            nav {
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 1rem;
+            }
+            
+            nav a {
+                padding: 0.5rem 1rem;
+            }
+            
+            .experience-item {
+                flex-direction: column;
+            }
+            
+            .figure-row {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Zepeng Li</h1>
-        
-        <p>Email: <a href="mailto:zel032@physics.ucsd.edu">zel032@physics.ucsd.edu</a></p>
+        <div class="container">
+            <h1>Zepeng Li</h1>
+            <p>Email: <a href="mailto:zel032@physics.ucsd.edu">zel032@physics.ucsd.edu</a></p>
+        </div>
     </header>
+
     <div class="container">
         <nav>
             <a href="index.html">Home</a>
             <a href="research.html">Research</a>
             <a href="publications.html">Selected Publications</a>
         </nav>
+
         <section>
-            <h2>About Me</h2>
-            <p>I am an Assistant Project Scientist at the University of California San Diego. 
-                My research focuses on neutrino physics, machine learning algorithms for data analysis, 
-                and development of cryogenic systems for particle detection experiments. 
-                I will start as an assistant professor of physics at University of Hawaii at Manoa in Jan 2025.</p>
+            <p class="intro">I am an Assistant Project Scientist at the University of California San Diego, 
+               specializing in neutrino physics, machine learning algorithms for data analysis, 
+               and development of cryogenic systems for particle detection experiments. 
+               I am excited to announce my upcoming role as an Assistant Professor of Physics 
+               at the University of Hawaii at Manoa, beginning January 2025.</p>
         </section>
+
         <section>
             <h2>Work Experience</h2>
-            <ul>
-                <div style="display: flex; justify-content: space-between;">
-                    <strong>Assistant Project Scientist</strong>
-                    <span>UCSD (June 2023 - Present)</span>
-                  </div>
-                  <div style="display: flex; justify-content: space-between;">
-                    <strong>Postdoctoral Researcher</strong>
-                    <span>UCSD (Oct 2021 - May 2023)</span>
-                  </div>
-                  <div style="display: flex; justify-content: space-between;">
-                    <strong>Visiting Scholar</strong>
-                    <span>IHEP, CAS (Nov 2020 - Sep 2021)</span>
-                  </div>
-                  <div style="display: flex; justify-content: space-between;">
-                    <strong>Postdoctoral Associate</strong>
-                    <span>Yale (Jun 2017 - Oct 2020)</span>
-                  </div>
-            </ul>
+            <div class="experience-item">
+                <strong>Assistant Project Scientist</strong>
+                <span class="experience-date">UCSD (June 2023 - Present)</span>
+            </div>
+            <div class="experience-item">
+                <strong>Postdoctoral Researcher</strong>
+                <span class="experience-date">UCSD (Oct 2021 - May 2023)</span>
+            </div>
+            <div class="experience-item">
+                <strong>Visiting Scholar</strong>
+                <span class="experience-date">IHEP, CAS (Nov 2020 - Sep 2021)</span>
+            </div>
+            <div class="experience-item">
+                <strong>Postdoctoral Associate</strong>
+                <span class="experience-date">Yale (Jun 2017 - Oct 2020)</span>
+            </div>
         </section>
+
         <section>
             <h2>Education</h2>
-            <ul>
-                <div style="display: flex; justify-content: space-between;">
-                    <strong>Ph.D., Physics</strong>
-                    <span>Duke University, 2017</span>
-                  </div>
-                  <div style="display: flex; justify-content: space-between;">
-                    <strong>B.S., Physics</strong>
-                    <span>USTC, 2011</span>
-                  </div>
-            </ul>
+            <div class="experience-item">
+                <strong>Ph.D., Physics</strong>
+                <span class="experience-date">Duke University, 2017</span>
+            </div>
+            <div class="experience-item">
+                <strong>B.S., Physics</strong>
+                <span class="experience-date">USTC, 2011</span>
+            </div>
         </section>
     </div>
+
     <section class="figure-row">
-        <img src="126707_web.jpg" alt="Figure 1">
-        <img src="schematic-full.jpg" alt="Figure 2">
-        <img src="exo_installation_machine.png" alt="Figure 3">
-        <img src="JUNO_detector3D.jpg" alt="Figure 4">
+        <img src="126707_web.jpg" alt="Research Image 1">
+        <img src="schematic-full.jpg" alt="Research Image 2">
+        <img src="exo_installation_machine.png" alt="Research Image 3">
+        <img src="JUNO_detector3D.jpg" alt="Research Image 4">
     </section>
+
     <footer>
         <p>&copy; 2024 Zepeng Li</p>
     </footer>
